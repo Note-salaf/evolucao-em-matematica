@@ -1,6 +1,6 @@
 # Evolução em Matemática
 
-Demo:
+Demo: https://note-salaf.github.io/evolucao-em-matematica/
 
 Projeto de estudo em **HTML, CSS e JavaScript puro** para registro e acompanhamento da evolução de alunos em matemática.
 
