@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução em Matemática</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="card-principal">
+            <header class="titulo">
+                <h1>Evolução em Matemática</h1>
+            </header>
+            <section id="alunos">
+                <header>
+                    <h2>Alunos</h2>
+                    <button id="btnAdicionaAlunoTelaPrincipal">+ Adicionar aluno</button>
+                </header>
+                <nav class="card-alunos">
+
+                    <ul id="listaAlunos">
+                        <li><button type="button" class="alunos li-active">Ana<span>✔</span></button></li>
+                        <li><button type="button" class="alunos">João</button></li>
+                        <li><button type="button" class="alunos">Maria</button></li>
+                        <li><button type="button" class="alunos">Pedro</button></li>
+                    </ul>
+                </nav>
+
+            </section>
+            <section class="detalhes-aluno">
+                <header>
+                    <h2>Detalhes do Aluno</h2>
+                </header>
+                <article class="aluno">
+                    <img src="assets/images/alunos/rosto-menina.jpg" alt="Foto do aluno Ana">
+                    <div class="informacoes-aluno">
+                        <h3>Ana</h3>
+                        <div class="componente-curricular">
+                            <p>Operações Básicas</p>
+                        </div>
+                    </div>
+                </article>
+                <section class="historico">
+                    <h3>Histórico de Evolução</h3>
+                    <ul class="lista-historico">
+                        <li><span><img src="assets/images/icons/icone-concluido.jpg" alt=""></span><time
+                                datetime="2026-02-05">&nbsp;05/02/2026</time>
+                            &nbsp;Consolidado</li>
+                        <li><span><img src="assets/images/icons/icone-pendente.jpg" alt=""></span><time
+                                datetime="2026-02-01">&nbsp;01/02/2026</time> &nbsp;Em
+                            desenvolvimento</li>
+                        <li><span><img src="assets/images/icons/icone-nao-iniciado.png" alt=""></span><time
+                                datetime="2026-01-28">&nbsp;28/01/2026</time> &nbsp;Não
+                            iniciado</li>
+                    </ul>
+                </section>
+                <footer>
+                    <button id="btnRegistraEvolucoes">Registrar Evoluções</button>
+                </footer>
+            </section>
+        </section>
+    </main>
+     <!-- Dialog: Adicionar Aluno -->
+    <dialog id="dialogAdicionarAluno">
+        <form method="dialog" class="form-aluno">
+            <h3>Adicionar aluno</h3>
+
+            <label>
+                <h4>Nome do aluno</h4>
+                <input type="text" name="nome" id="inputNomeAluno" required placeholder="Digite o nome do aluno">
+            </label>
+
+            <div class="botoesDialog">
+                <button value="cancel" id="btnCancelar" type="reset">Cancelar</button>
+                <button value="confirm" id="btnAdicionar">+&nbsp;&nbsp;&nbsp;Adicionar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Dialog: Detalhes Aluno -->
+    <dialog  id="dialogDetalhesAluno">
+        <form method="dialog" class="form-detalhes">
+            <h3>Evolução do aluno</h3>
+
+            <label>
+                <h4>Data</h4>
+                <input type="date" name="inputDate" id="inputDate" required>
+            </label>
+            <label>
+                <h4>Evolução</h4>
+                <select name="selectEvolucao" id="selectEvolucao" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="consolidado">Consolidado</option>
+                    <option value="emDesenvolvimento">Em desenvolvimento</option>
+                    <option value="naoIniciado">Não iniciado</option>
+                </select>
+            </label>
+
+            <div class="botoesDialogDetalhes">
+                <button value="cancel" id="btnCancelarDetalhes" type="reset">Cancelar</button>
+                <button value="submit" id="btnInserirDetalhes" type="submit">+&nbsp;&nbsp;&nbsp;Inserir</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
